@@ -1,6 +1,10 @@
 import Head from "next/head";
+import Footer from "../components/footer";
+// import { useSession, signIn, signOut } from "next-auth/client";
 
 export default function Home() {
+  // const { session, loading } = useSession();
+
   return (
     <div
       className="flex flex-col items-center justify-center min-h-screen"
@@ -12,12 +16,24 @@ export default function Home() {
       </Head>
 
       <main
-        className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center bg-hero bg text-white"
+        className="flex flex-1 flex-col items-center justify-center w-full px-20 text-center bg-hero bg text-white"
         style={{
           "background-image":
-            "linear-gradient(rgba(0, 80, 156, 0.5), rgba(0, 80, 156, 0.2)), url(/hero-bg.jpg)",
+            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) ,rgba(0, 0, 0, 0.8)), url(/hero-bg.jpg)",
         }}
       >
+        {/* {!session && (
+          <>
+            Not signed in <br />
+            <button onClick={() => signIn()}>Sign in</button>
+          </>
+        )}
+        {session && (
+          <>
+            Signed in as {session.user.email} <br />
+            <button onClick={() => signOut()}>Sign out</button>
+          </>
+        )} */}
         <h1 className="text-5xl font-bold max-w-xl">
           Unlimited films, TV programmes and more.
         </h1>
@@ -55,6 +71,7 @@ export default function Home() {
           </button>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
