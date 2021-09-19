@@ -6,10 +6,7 @@ export default function Home() {
   // const { session, loading } = useSession();
 
   return (
-    <div
-      className="flex flex-col items-center justify-center min-h-screen"
-      style={{}}
-    >
+    <div className="flex flex-col items-center justify-center min-h-screen">
       <Head>
         <title>Netflix Clone</title>
         <link rel="icon" href="/favicon.ico" />
